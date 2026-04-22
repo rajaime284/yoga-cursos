@@ -14,7 +14,7 @@ export function NavLinks() {
   const pathname = usePathname();
 
   return (
-    <nav className="flex flex-wrap items-center gap-6 text-sm font-medium text-white/95">
+    <nav className="flex flex-nowrap items-center gap-5 text-xs font-medium text-white/90 sm:flex-wrap sm:gap-6 sm:text-sm sm:text-white/95">
       {links.map(({ href, label }) => {
         const active =
           href === "/"
@@ -24,7 +24,7 @@ export function NavLinks() {
           <Link
             key={href}
             href={href}
-            className={`border-b-2 pb-0.5 transition-colors ${
+            className={`shrink-0 border-b-2 pb-0.5 transition-colors ${
               active
                 ? "border-white"
                 : "border-transparent hover:border-white/40"

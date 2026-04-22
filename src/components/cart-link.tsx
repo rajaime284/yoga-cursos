@@ -10,10 +10,10 @@ export function CartLink() {
   return (
     <Link
       href="/carrito"
-      className="relative inline-flex size-10 items-center justify-center rounded-md border border-white/25 text-white transition hover:bg-white/10"
+      className="relative inline-flex size-9 items-center justify-center rounded-md border border-white/20 text-white transition hover:bg-white/10 sm:size-10 sm:border-white/25"
       aria-label={count > 0 ? `Carrito, ${count} artículos` : "Carrito"}
     >
-      <IconCart className="size-5" />
+      <IconCart className="size-[1.15rem] sm:size-5" />
       {count > 0 ? (
         <span className="absolute -right-1 -top-1 flex min-w-5 items-center justify-center rounded-full bg-white px-1 text-[10px] font-bold leading-none text-[var(--color-primary)]">
           {count > 9 ? "9+" : count}

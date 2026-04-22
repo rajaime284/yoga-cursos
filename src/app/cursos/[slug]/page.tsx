@@ -26,8 +26,8 @@ export default async function CursoDetallePage({ params }: Props) {
 
   return (
     <article className="bg-white">
-      <div className="mx-auto grid max-w-6xl gap-10 px-4 py-12 lg:grid-cols-2 lg:items-start lg:px-6 lg:py-16">
-        <div className="relative aspect-[4/3] overflow-hidden rounded-lg bg-neutral-100 lg:sticky lg:top-24">
+      <div className="mx-auto grid max-w-6xl gap-6 px-4 py-8 sm:gap-10 sm:py-12 lg:grid-cols-2 lg:items-start lg:px-6 lg:py-16">
+        <div className="relative aspect-[16/10] overflow-hidden rounded-md bg-neutral-100 sm:aspect-[4/3] sm:rounded-lg lg:sticky lg:top-24">
           <img
             src={course.image}
             alt={course.title}
@@ -39,21 +39,21 @@ export default async function CursoDetallePage({ params }: Props) {
           />
         </div>
         <div>
-          <p className="text-sm font-medium text-[var(--color-primary)]">
+          <p className="text-xs font-medium text-[var(--color-primary)] sm:text-sm">
             {course.level} · {course.duration}
           </p>
-          <h1 className="mt-2 text-3xl font-semibold tracking-tight text-neutral-900 sm:text-4xl">
+          <h1 className="mt-1.5 text-2xl font-semibold tracking-tight text-neutral-900 sm:mt-2 sm:text-4xl">
             {course.title}
           </h1>
-          <p className="mt-2 text-lg text-neutral-600">{course.tagline}</p>
-          <p className="mt-6 leading-relaxed text-neutral-700">
+          <p className="mt-2 text-base text-neutral-600 sm:text-lg">{course.tagline}</p>
+          <p className="mt-4 text-sm leading-relaxed text-neutral-700 sm:mt-6 sm:text-base">
             {course.description}
           </p>
-          <p className="mt-8 text-2xl font-semibold text-neutral-900">
+          <p className="mt-6 text-xl font-semibold text-neutral-900 sm:mt-8 sm:text-2xl">
             {course.priceEUR} €
           </p>
-          <div className="mt-6 flex flex-wrap gap-3">
-            <AddToCartButton courseId={course.id} className="min-w-[200px]" />
+          <div className="mt-4 sm:mt-6">
+            <AddToCartButton courseId={course.id} className="w-full min-w-0 sm:w-auto sm:min-w-[200px]" />
           </div>
         </div>
       </div>
